@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+.footer {
+    height: 50px;
+    /*設定footer本身高度*/
+    margin-top: 200px;
+}
+.jumbotron{
+    background-image: url("../img/5652030.jpg");
+    background-size:cover;
+    /* background-repeat: no-repeat; */
+    background-position: 0 -300px;
+    min-height: 500px;
+    opacity:0.8;
+}
+
+.intro{
+    color: #6f6e6e;
+}
+.portfolio{
+    box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.5);
+    transition: all 1s;
+    background-color: #f0f0f0;
+    min-height: 300px;
+}
+.portfolio_img{
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+}
+/* 控制子元素 */
+.portfolio:hover .portfolio_img{
+    transform: scale(1.05);
+}
+/* 在背景圖片上面插入像是遮色片的東西，讓比較白的圖片變暗，就可以用白色的字 */
+.bbb{
+    opacity: 0;
+    transition: all 1s;
+}
+.portfolio:hover .bbb{
+    opacity: 1;
+    transform: scale(1.05);
+}
+.show_text{
+    opacity: 0;
+    transition: all 1s;
+    border: 1px solid white;
+    padding: 5px 15px;
+}
+.portfolio:hover .show_text{
+    opacity: 1;
+}
+
+@keyframes typing {
+    from { width: 0 };
+  }
+  
+  /* #title {
+    width: 10em;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(18);
+  } */
+  @keyframes caret {
+    50% { border-color: transparent; }
+  }
+  
+  #title {
+    width: 10em;
+  border-right: .05em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(11),
+    caret 1s steps(1) infinite;
+  }
+
+  /* 背景圖片上下位移 */
+  .typing-txt-block.anim {
+    -webkit-animation: anim 20s ease-in-out infinite;
+    animation: anim 20s ease-in-out infinite;
+  }
+  @keyframes anim {
+    0% {
+      background-position: top;
+    }
+    50% {
+      background-position: bottom;
+    }
+    100% {
+      background-position: top;
+    }
+  }
