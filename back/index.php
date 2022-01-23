@@ -9,5 +9,8 @@
 </head>
 <body>
 <h1>作品集管理後台</h1>
+<div>
+    <a href="../index.php">回到前台</a>
+</div>
 </body>
 </html>

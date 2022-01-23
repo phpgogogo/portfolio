@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,20 +16,27 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <form action="">
-        <div class="container p-3" style="margin-top:100px; background-color: #F0F0F0;">
+    <?php
+        if(isset($_SESSION["error"])){
+            echo "<div class='text-center text-danger' style='padding-top:30px;'>";
+            echo "你真的是管理員嗎??";
+            echo "</div>";
+        }
+
+    ?>
+    <form action="api/login.php" method="post">
+        <div class="container p-3" style="margin-top:30px; background-color: #F0F0F0;">
             <h2 class="text-center">管理員登入</h2>
-    
             <div class="row">
                 <div class="mx-auto mt-2">
                     帳號:
-                    <input class="form-control" type="text" name="" id="">
+                    <input class="form-control" type="text" name="acc" required>
                 </div>
             </div>
             <div class="row">
                 <div class="mx-auto mt-2">
                     密碼:
-                    <input class="form-control" type="text" name="" id="">
+                    <input class="form-control" type="password" name="pw" required>
                 </div>
             </div>
             <div class="text-center">

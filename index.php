@@ -1,3 +1,11 @@
+<?php
+    include_once "base.php";
+
+    if(isset($_SESSION["error"])){
+        unset($_SESSION["error"]);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

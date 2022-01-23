@@ -21,9 +21,24 @@
                 <li class="" style="cursor: pointer;">
                     <a class="mx-2 text-info" style="text-decoration: none;" onclick="contact()"><i class="fas fa-envelope"></i> Contact</a>
                 </li>
-                <li class="" style="cursor: pointer;">
-                    <a href="login.html" class="ml-2 mr-5 text-info" style="text-decoration: none;"><i class="fas fa-user-shield"></i> Login</a>
-                </li>
+                <?php
+                if(isset($_SESSION["user"]) && $_SESSION["user"]="admin"){
+                ?>
+                    <li class="" style="cursor: pointer;">
+                        <a href="back/index.php" class="mx-2 text-info" style="text-decoration: none;"><i class="fas fa-hand-point-left"></i> 前往後台</a>
+                    </li>
+                    <li class="" style="cursor: pointer;">
+                        <a href="api/logout.php" class="ml-2 mr-5 text-info" style="text-decoration: none;"><i class="fas fa-user-shield"></i> Logout</a>
+                    </li>
+                <?php
+                }else{
+                ?>
+                    <li class="" style="cursor: pointer;">
+                        <a href="login.php" class="ml-2 mr-5 text-info" style="text-decoration: none;"><i class="fas fa-user-shield"></i> Login</a>
+                    </li>
+                <?php
+                }
+                ?>
             </ul>
         </div>
     </nav>
