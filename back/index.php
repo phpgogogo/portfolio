@@ -8,9 +8,26 @@
     <title>作品集後台管理</title>
 </head>
 <body>
-<h1>作品集管理後台</h1>
-<div>
-    <a href="../index.php">回到前台</a>
+
+<!-- content -->
+<div class="container mb-5">
+    <?php
+    if(isset($_GET["do"])){
+        $do=$_GET["do"];
+    }else{
+        $do="manage";
+    }
+    $web=$do . ".php";
+    if (file_exists($web)) {
+        include $web;
+    }else {
+        include "manage.php";
+    }
+
+
+
+
+?>
 </div>
 </body>
 </html>

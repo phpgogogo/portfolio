@@ -2,7 +2,7 @@
 session_start();
 
 class DB{
-    protected $dsn="mysql:host=localhost;charset=utf8;dbname=db01";
+    protected $dsn="mysql:host=localhost;charset=utf8;dbname=portfolio";
     protected $user="root";
     protected $pw="";
     protected $table;
@@ -117,5 +117,8 @@ function dd($array){
 function to($url){
     header("location:" . $url);
 }
+
+
+$Portfolios=new DB('portfolios');
 
 ?>
