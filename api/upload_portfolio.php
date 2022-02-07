@@ -12,6 +12,6 @@
 
     $Portfolios->save($_POST);
 
-    to("../back/edit_portfolio.php");
+    to("../back/index.php?do=edit_portfolio");
 
 ?>

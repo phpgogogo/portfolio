@@ -16,7 +16,7 @@
 <h1 class="my-3">作品集管理後台</h1>
 <div class="">
     <a href="../index.php">回到前台</a><br>
-    <a href="edit_portfolio.php">編輯作品集</a>
+    <a href="index.php?do=edit_portfolio">編輯作品集</a>
 </div>
 
 
