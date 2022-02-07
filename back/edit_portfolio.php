@@ -14,7 +14,7 @@
 <body>
     <?php
         $rows=$Portfolios->all("portfolios");
-        dd($rows);
+        // dd($rows);
 
     ?>
 <div class="col-md-6 mt-3 mx-auto">
@@ -41,57 +41,61 @@
         </div>
     </form>
 </div>
-<div class="col-md-10 mt-3 mx-auto">
-    <div class="text-center">作品集清單</div>
-    
-    <div style="display:flex;" class="text-center">
-        <div style="width: 22%;background:#eee;">作品集圖片</div>
-        <div style="width: 22%;background:#eee;">作品集名稱</div>
-        <div style="width: 22%;background:#eee;">作品集連結</div>
-        <div style="width: 22%;background:#eee;">作品集分類</div>
-        <div style="width: 18%;background:#eee;">操作</div>
-    </div>
-    <?php
-        foreach($rows as $key=>$row){
-            $checked=($row["sh"]==1)?"checked":"";
-            ?>
-                <div style="display:flex;align-items:center;background:#eee;" class="text-center">
-                    <div class="p-3" style="width: 22%;">
-                        <img src="../img/<?=$row["img"];?>" style="width:100px;object-fit: cover;">
-                    </div>
-                    <div class="p-3" style="width: 22%;">
-                        <input size="10" type="text" name="title" value="<?=$row["title"];?>">
-                    </div>
-                    <div class="p-3" style="width: 22%;">
-                        <input size="15" type="text" name="link" value="<?=$row["link"];?>">
-                    </div>
-                    <div class="p-3" style="width: 22%;">
-                        <input size="10" type="text" name="class" value="<?=$row["class"];?>">
-                    </div>
-                    <div style="width: 18%;">
-                        <div>
-                            <input type="checkbox" name="sh[]" value="<?=$row["id"];?>" <?= $checked; ?>>
-                            <label>顯示</label>
+
+<form action="../api/edit_portfolio.php" method="post">
+    <div class="col-md-10 mt-3 mx-auto">
+        <div class="text-center">作品集清單</div>
+        
+        <div style="display:flex;" class="text-center">
+            <div style="width: 22%;background:#eee;">作品集圖片</div>
+            <div style="width: 22%;background:#eee;">作品集名稱</div>
+            <div style="width: 22%;background:#eee;">作品集連結</div>
+            <div style="width: 22%;background:#eee;">作品集分類</div>
+            <div style="width: 18%;background:#eee;">操作</div>
+        </div>
+        <?php
+            foreach($rows as $key=>$row){
+                $checked=($row["sh"]==1)?"checked":"";
+                ?>
+                    <div style="display:flex;align-items:center;background:#eee;" class="text-center">
+                        <div class="p-3" style="width: 22%;">
+                            <img src="../img/<?=$row["img"];?>" style="width:100px;object-fit: cover;">
                         </div>
-                        <div>
-                            <input type="checkbox" name="del[]" value="<?=$row["id"];?>">
-                            <label>刪除</label>
+                        <div class="p-3" style="width: 22%;">
+                            <input size="10" type="text" name="title[]" value="<?=$row["title"];?>">
+                        </div>
+                        <div class="p-3" style="width: 22%;">
+                            <input size="15" type="text" name="link[]" value="<?=$row["link"];?>">
+                        </div>
+                        <div class="p-3" style="width: 22%;">
+                            <input size="10" type="text" name="class[]" value="<?=$row["class"];?>">
+                        </div>
+                        <div style="width: 18%;">
+                            <div>
+                                <input type="checkbox" name="sh[]" value="<?=$row["id"];?>" <?= $checked; ?>>
+                                <label>顯示</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="del[]" value="<?=$row["id"];?>">
+                                <label>刪除</label>
+                                <input type="hidden" name="id[]" value="<?=$row['id'];?>">
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php
-        }
-    ?>
+                <?php
+            }
+        ?>
+        
+        <div class="text-center mt-2">
+                <input class="btn btn-success" type="submit" value="確定修改">
+                <input class="btn btn-danger" type="reset" value="重置">
+        </div>
+        
     
-    <div class="text-center mt-2">
-            <input class="btn btn-success" type="submit" value="確定修改">
-            <input class="btn btn-danger" type="reset" value="重置">
+    
+    
     </div>
-    
-
-
-
-</div>
+</form>
 
 
 

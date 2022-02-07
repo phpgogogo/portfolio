@@ -77,7 +77,7 @@ class DB{
 
     public function save($array){
         if(isset($array["id"])){
-            foreach($array[0] as $key=>$value){
+            foreach($array as $key=>$value){
                 $tmp[]="`$key`='$value'";
             }
             $sql="UPDATE $this->table SET " . implode(",",$tmp) . " WHERE `id`='{$array["id"]}'";
