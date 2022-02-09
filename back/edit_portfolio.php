@@ -13,11 +13,15 @@
 </head>
 <body>
     <?php
-        $rows=$Portfolios->all("portfolios");
+        $rows=$Portfolios->all();
         // dd($rows);
 
     ?>
-<div class="col-md-6 mt-3 mx-auto">
+    <div class="text-center mt-5">
+        <h1>新增作品集</h1>
+    </div>
+
+<div class="col-md-6 my-3 mx-auto">
     <form action="../api/upload_portfolio.php" method="post" enctype="multipart/form-data">
 
         <div class='custom-file mx-auto d-block mb-2'>
@@ -44,14 +48,16 @@
 
 <form action="../api/edit_portfolio.php" method="post">
     <div class="col-md-10 mt-3 mx-auto">
-        <div class="text-center">作品集清單</div>
+        <div class="text-center py-2">
+            <h1>作品集清單</h1>
+        </div>
         
         <div style="display:flex;" class="text-center">
-            <div style="width: 22%;background:#eee;">作品集圖片</div>
-            <div style="width: 22%;background:#eee;">作品集名稱</div>
-            <div style="width: 22%;background:#eee;">作品集連結</div>
-            <div style="width: 22%;background:#eee;">作品集分類</div>
-            <div style="width: 18%;background:#eee;">操作</div>
+            <div class="py-2" style="width: 22%;background:#eee;">作品集圖片</div>
+            <div class="py-2" style="width: 22%;background:#eee;">作品集名稱</div>
+            <div class="py-2" style="width: 22%;background:#eee;">作品集連結</div>
+            <div class="py-2" style="width: 22%;background:#eee;">作品集分類</div>
+            <div class="py-2" style="width: 18%;background:#eee;">操作</div>
         </div>
         <?php
             foreach($rows as $key=>$row){
@@ -89,6 +95,9 @@
         <div class="text-center mt-2">
                 <input class="btn btn-success" type="submit" value="確定修改">
                 <input class="btn btn-danger" type="reset" value="重置">
+                <a href="../index.php">
+                    <button class="btn btn-primary" type="button">回到前台</button>
+                </a>
         </div>
         
     
