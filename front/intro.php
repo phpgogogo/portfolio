@@ -3,6 +3,8 @@
     foreach($rows as $row){
 
     }
+
+    $introimg=$Introimg->find(1);
 ?>
 
 <div id="about"></div>
@@ -34,7 +36,7 @@
             </div>
         </div>
             <div class="col-md-6 col-12">
-                <img src="https://i.picsum.photos/id/119/3264/2176.jpg?hmac=PYRYBOGQhlUm6wS94EkpN8dTIC7-2GniC3pqOt6CpNU" width="100%">
+                <img src="<?=$introimg['img'];?>" width="100%">
             </div>
         </div>
         

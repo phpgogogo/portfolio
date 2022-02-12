@@ -39,7 +39,7 @@
                 <input type="text" id="intro" name="intro" value="<?=$row["intro"];?>" size="50">
             </div>
             <div class="mt-2">
-                <button class="btn btn-success" type="button" onclick="edit()">修改</button>
+                <button class="btn btn-success" type="button" onclick="edit()">修改intro</button>
                 <a href="../index.php">
                     <button class="btn btn-primary" type="button">回到前台</button>
                 </a>
@@ -47,7 +47,14 @@
         </div>
         
         <div class="col-md-6 col-12">
-            <img src="https://i.picsum.photos/id/119/3264/2176.jpg?hmac=PYRYBOGQhlUm6wS94EkpN8dTIC7-2GniC3pqOt6CpNU" width="100%">
+            <?php
+                $introimg=$Introimg->find(1);
+            ?>
+            <img id="image" src="<?=$introimg['img'];?>" width="100%"><br>
+            <div class="mt-2 text-center">
+                <button class="btn btn-warning" onclick="random()">隨機圖片</button>
+                <button class="btn btn-info" onclick="edit_img()">修改圖片</button>
+            </div>
         </div>
     </div>
 </div>
@@ -59,6 +66,29 @@
         $.post("../api/edit_intro.php",
         {id:1,name:$("#name").val(),age:$("#age").val(),hobby:$("#hobby").val(),skill:$("#skill").val(),intro:$("#intro").val()},
         ()=>{
+            location.reload();
+        })
+    }
+
+
+    function random(){
+        let image=document.getElementById('image');
+        let img=["https://i.picsum.photos/id/119/3264/2176.jpg?hmac=PYRYBOGQhlUm6wS94EkpN8dTIC7-2GniC3pqOt6CpNU",
+                "https://i.picsum.photos/id/100/2500/1656.jpg?hmac=gWyN-7ZB32rkAjMhKXQgdHOIBRHyTSgzuOK6U0vXb1w",
+                "https://i.picsum.photos/id/1026/4621/3070.jpg?hmac=OJ880cIneqAKIwHbYgkRZxQcuMgFZ4IZKJasZ5c5Wcw",
+                "https://i.picsum.photos/id/1028/5184/3456.jpg?hmac=WhttNfn25eTgLTNnhRujSq4IVjx2mMa6wvPG1c6qMVc",
+                "https://i.picsum.photos/id/103/2592/1936.jpg?hmac=aC1FT3vX9bCVMIT-KXjHLhP6vImAcsyGCH49vVkAjPQ"];
+        function randomnum(x){
+            return Math.floor(Math.random()*x);
+        }
+        image.src=`${img[randomnum(4)]}`;
+        
+    }
+
+    function edit_img(){
+        let image=document.getElementById('image');
+        let link=image.src;
+        $.post("../api/edit_intro_img.php",{id:"1",img:link},()=>{
             location.reload();
         })
     }
