@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background:#eee;">
     <?php
         $rows=$Intro->all();
         // dd($rows);
@@ -54,6 +54,7 @@
             <div class="mt-2 text-center">
                 <button class="btn btn-warning" onclick="random()">隨機圖片</button>
                 <button class="btn btn-info" onclick="edit_img()">修改圖片</button>
+                <a href="./index.php"><button class="btn btn-primary">回到後台</button></a>
             </div>
         </div>
     </div>
