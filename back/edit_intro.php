@@ -54,7 +54,7 @@
             <div class="mt-2 text-center">
                 <button class="btn btn-warning" onclick="random()">隨機圖片</button>
                 <button class="btn btn-info" onclick="edit_img()">修改圖片</button>
-                <a href="./index.php"><button class="btn btn-primary">回到後台</button></a>
+                <a href="./index.php"><button class="btn btn-primary" type="button">回到後台</button></a>
             </div>
         </div>
     </div>

@@ -98,7 +98,7 @@
                 <a href="../index.php">
                     <button class="btn btn-primary" type="button">回到前台</button>
                 </a>
-                <a href="./index.php"><button class="btn btn-info">回到後台</button></a>
+                <a href="./index.php"><button class="btn btn-info" type="button">回到後台</button></a>
         </div>
         
     
