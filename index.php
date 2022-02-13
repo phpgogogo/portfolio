@@ -67,15 +67,15 @@
         }
         function portfolio(){
             let portfolio=document.getElementById("portfolio");
-            portfolio.scrollIntoView({block:'end', behavior:'smooth'});
+            portfolio.scrollIntoView({block:'start', behavior:'smooth'});
         }
-        function home(){
-            let home=document.getElementById("home");
-            home.scrollIntoView({behavior:'smooth'});
-        }
+        // function home(){
+        //     let home=document.getElementById("home");
+        //     home.scrollIntoView({behavior:'smooth'});
+        // }
         function contact(){
             let contact=document.getElementById("contact");
-            contact.scrollIntoView({block:'end', behavior:'smooth'});
+            contact.scrollIntoView({block:'start', behavior:'smooth'});
         }
 
     </script>

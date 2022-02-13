@@ -7,10 +7,9 @@
     $introimg=$Introimg->find(1);
 ?>
 
-<div id="about"></div>
+<!-- <div id="about"></div> -->
     <!-- 自我介紹 -->
     <div id="about" class="container" style="margin-top: 200px;">
-        <div class="row">
         <div class="row">
         <div class="col-md-6 col-12">
             <h1>About me</h1>

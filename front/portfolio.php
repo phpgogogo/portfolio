@@ -1,5 +1,5 @@
 <!-- content -->
-<div class="container" style="margin-top: 300px;">
+<div id="portfolio" class="container" style="margin-top: 300px;">
         <h1 class="text-center" style="margin-bottom: 100px;">LATEST PROTFOLIO</h1>
 
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -18,7 +18,7 @@
       </ul>
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
-            <div id="portfolio" class="row">
+            <div id="" class="row">
             <?php
             $rows=$Portfolios->all(["sh"=>1]);
             // dd($rows);
