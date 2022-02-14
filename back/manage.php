@@ -18,7 +18,8 @@
     <a href="../index.php">回到前台</a><br>
     <a href="index.php?do=edit_portfolio">編輯作品集</a><br>
     <a href="index.php?do=edit_intro">編輯自我介紹</a><br>
-    <a href="index.php?do=edit_footer">編輯頁尾</a><br>
+    <a href="index.php?do=edit_footer">編輯頁尾顏色</a><br>
+    <a href="index.php?do=edit_footer_text">編輯頁尾文字</a><br>
 </div>
 
 
