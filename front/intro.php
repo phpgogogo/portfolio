@@ -4,7 +4,8 @@
 
     }
 
-    $introimg=$Introimg->find(1);
+    $imgs=$Introimg->all(["sh"=>1]);
+    foreach($imgs as $img){}
 ?>
 
 <!-- <div id="about"></div> -->
@@ -35,7 +36,7 @@
             </div>
         </div>
             <div class="col-md-6 col-12">
-                <img src="<?=$introimg['img'];?>" width="100%">
+                <img src="img/<?=$img["img"];?>" width="100%">
             </div>
         </div>
         
