@@ -8,6 +8,11 @@
     foreach($imgs as $img){}
 ?>
 
+<?php
+$abouts=$Block->all();
+foreach($abouts as $about){
+    if($about["name"]=="about" && $about["sh"]==1){
+        ?>
 <!-- <div id="about"></div> -->
     <!-- 自我介紹 -->
     <div id="about" class="container" style="margin-top: 200px;">
@@ -41,3 +46,9 @@
         </div>
         
     </div>
+    <?php
+    }else{
+    }
+}
+
+?>

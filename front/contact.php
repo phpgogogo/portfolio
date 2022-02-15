@@ -1,4 +1,11 @@
 <!-- contact -->
+<?php
+$rows=$Block->all();
+foreach($rows as $row){
+    if($row["name"]=="contact" && $row["sh"]==1){
+        ?>
+
+        
 <div id="contact" class="div" style="background-color: #f0f0f0; margin-top: 300px; min-height:550px;">
         <h1 class="text-center" style="padding-top: 40px;">CONTACT ME</h1>
         <div class="container">
@@ -21,3 +28,9 @@
             </div>
         </div>
     </div>
+    <?php
+    }else{
+    }
+}
+
+?>

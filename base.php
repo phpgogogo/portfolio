@@ -124,5 +124,6 @@ $Intro=new DB('intro');
 $Introimg=new DB('introimg');
 $Footer=new DB('footer');
 $Footer_text=new DB('footer_text');
+$Block=new DB("block");
 
 ?>

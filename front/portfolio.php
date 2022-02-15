@@ -1,3 +1,8 @@
+<?php
+$abouts=$Block->all();
+foreach($abouts as $about){
+    if($about["name"]=="portfolio" && $about["sh"]==1){
+        ?>
 <!-- content -->
 <div id="portfolio" class="container" style="margin-top: 300px;">
         <h1 class="text-center" style="margin-bottom: 100px;">LATEST PROTFOLIO</h1>
@@ -478,3 +483,9 @@
 
         
     </div>
+    <?php
+    }else{
+    }
+}
+
+?>
