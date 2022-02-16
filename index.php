@@ -37,7 +37,7 @@
     ?>
     <!-- portfolio -->
     <?php
-        include "front/portfolio.php";
+        include "front/portfolio2.php";
     ?>
     <!-- contact -->
     <?php

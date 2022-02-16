@@ -139,9 +139,9 @@ foreach($abouts as $about){
         <div class="tab-pane fade" id="pills-back" role="tabpanel" aria-labelledby="pills-back-tab">
             <div id="portfolio" class="row">
             <?php
-            $rows=$Portfolios->all(["sh"=>1,"class"=>"back end"]);
+            $rows=$Portfolios->all(["sh"=>1,"class"=>"back"]);
             // dd($rows);
-            $total=$Portfolios->math("count","*",["sh"=>1,"class"=>"back end"]);
+            $total=$Portfolios->math("count","*",["sh"=>1,"class"=>"back"]);
             // echo $total;
             $count=1;
             foreach($rows as $key=>$row){
@@ -253,9 +253,9 @@ foreach($abouts as $about){
         <div class="tab-pane fade" id="pills-front" role="tabpanel" aria-labelledby="pills-front-tab">
             <div id="portfolio" class="row">
             <?php
-            $rows=$Portfolios->all(["sh"=>1,"class"=>"front end"]);
+            $rows=$Portfolios->all(["sh"=>1,"class"=>"front"]);
             // dd($rows);
-            $total=$Portfolios->math("count","*",["sh"=>1,"class"=>"front end"]);
+            $total=$Portfolios->math("count","*",["sh"=>1,"class"=>"front"]);
             // echo $total;
             $count=1;
             foreach($rows as $key=>$row){

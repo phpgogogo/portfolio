@@ -144,9 +144,9 @@ CREATE TABLE `portfolios` (
 --
 
 INSERT INTO `portfolios` (`id`, `img`, `sh`, `link`, `title`, `class`) VALUES
-(14, 'portfolio1.png', 1, 'http://220.128.133.15/s1100406/PHP/vote/index.php', 'Vote System', 'back end'),
-(15, 'portfolio2.png', 1, 'http://220.128.133.15/s1100406/PHP/calendar/index.php', 'Calendar', 'back end'),
-(16, 'portfolio3.png', 1, 'http://220.128.133.15/s1100406/HTML/bootstrap_form.html', 'Bootstrap Form', 'front end'),
+(14, 'portfolio1.png', 1, 'http://220.128.133.15/s1100406/PHP/vote/index.php', 'Vote System', 'back'),
+(15, 'portfolio2.png', 1, 'http://220.128.133.15/s1100406/PHP/calendar/index.php', 'Calendar', 'back'),
+(16, 'portfolio3.png', 1, 'http://220.128.133.15/s1100406/HTML/bootstrap_form.html', 'Bootstrap Form', 'front'),
 (17, 'turtle.png', 1, 'ai.html', 'Illustrator', 'etc'),
 (18, 'banner.jpg', 1, 'ps.html', 'Photoshop', 'etc');
 
