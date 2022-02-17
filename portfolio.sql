@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-02-17 07:37:14
+-- 產生時間： 2022-02-17 08:27:46
 -- 伺服器版本： 10.4.22-MariaDB
 -- PHP 版本： 7.4.26
 
@@ -62,7 +62,30 @@ CREATE TABLE `contact` (
 INSERT INTO `contact` (`id`, `name`, `email`, `msg`) VALUES
 (3, 'juyy', 'iyui', 'uyiuyi'),
 (5, 'wefew', 'fewf', 'wefwefewf'),
-(7, 'ewfwe', 'fwef', 'ewfwefwf');
+(7, 'ewfwe', 'fwef', 'ewfwefwf'),
+(8, 'wefewf', 'ewfew', 'fewfewf'),
+(9, 'wefewf', 'ewfew', 'fewfewf'),
+(10, 'ewfew', 'fewf', 'ewfewfewf');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `contact_text`
+--
+
+CREATE TABLE `contact_text` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `tel` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `email` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `time` text COLLATE utf8mb4_unicode_520_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- 傾印資料表的資料 `contact_text`
+--
+
+INSERT INTO `contact_text` (`id`, `tel`, `email`, `time`) VALUES
+(1, '09xxxxxxxx', 'aaaa@bbbb', '10:30~15:30');
 
 -- --------------------------------------------------------
 
@@ -189,6 +212,12 @@ ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `contact_text`
+--
+ALTER TABLE `contact_text`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 資料表索引 `footer`
 --
 ALTER TABLE `footer`
@@ -232,7 +261,13 @@ ALTER TABLE `block`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `contact_text`
+--
+ALTER TABLE `contact_text`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `footer`
