@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-02-15 18:06:31
--- 伺服器版本： 10.4.21-MariaDB
--- PHP 版本： 7.4.23
+-- 產生時間： 2022-02-17 07:37:14
+-- 伺服器版本： 10.4.22-MariaDB
+-- PHP 版本： 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,6 +41,28 @@ INSERT INTO `block` (`id`, `name`, `sh`) VALUES
 (1, 'contact', 1),
 (2, 'about', 1),
 (3, 'portfolio', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `name` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `email` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `msg` text COLLATE utf8mb4_unicode_520_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- 傾印資料表的資料 `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `email`, `msg`) VALUES
+(3, 'juyy', 'iyui', 'uyiuyi'),
+(5, 'wefew', 'fewf', 'wefwefewf'),
+(7, 'ewfwe', 'fwef', 'ewfwefwf');
 
 -- --------------------------------------------------------
 
@@ -102,7 +124,7 @@ CREATE TABLE `intro` (
 --
 
 INSERT INTO `intro` (`id`, `name`, `age`, `hobby`, `skill`, `intro`) VALUES
-(1, 'qqq', '30歲', '玩遊戲、聽音樂', 'PHP、JS、Jquery、CSS', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore molestiae temporibus voluptas odio minima dolorum minus placeat nihil est vero neque sunt, repellendus, quaerat possimus quisquam maiores! Corporis, neque corrupti!AAA');
+(1, 'iuhiiygygi', '30歲', '玩遊戲、聽音樂', 'PHP、JS、Jquery、CSS', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore molestiae temporibus voluptas odio minima dolorum minus placeat nihil est vero neque sunt, repellendus, quaerat possimus quisquam maiores! Corporis, neque corrupti!AAA');
 
 -- --------------------------------------------------------
 
@@ -161,6 +183,12 @@ ALTER TABLE `block`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 資料表索引 `footer`
 --
 ALTER TABLE `footer`
@@ -201,6 +229,12 @@ ALTER TABLE `block`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- 使用資料表自動遞增(AUTO_INCREMENT) `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- 使用資料表自動遞增(AUTO_INCREMENT) `footer`
 --
 ALTER TABLE `footer`
@@ -222,13 +256,13 @@ ALTER TABLE `intro`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `introimg`
 --
 ALTER TABLE `introimg`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `portfolios`
 --
 ALTER TABLE `portfolios`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
