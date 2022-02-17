@@ -11,7 +11,7 @@ foreach($rows as $row){
         <div class="container">
             <div class="row">
                     <div class="col-md-6 col-12">
-                        <form action="../api/contact.php" method="post">
+                        <form action="api/contact.php" method="post">
                             <input type="text" name="name" id="name" class="form-control mt-2" placeholder="Name" required>
                             <input type="text" name="email" id="email" class="form-control mt-2" placeholder="Email" required>
                             <textarea class="form-control mt-2" name="msg" id="msg" cols="70" rows="10" placeholder="Message"></textarea>
