@@ -57,7 +57,7 @@
                 <img id="image" src="../img/<?= $introimg['img']; ?>" width="100%"><br>
             </div>
         </div>
-        <h1 class="text-center mt-3">新增頁尾顏色</h1>
+        <h1 class="text-center mt-3">新增自我介紹圖片</h1>
         <div class="col-md-6 mx-auto mt-3">
             <form action="../api/add_introimg.php" method="post" enctype="multipart/form-data">
                 <div class="text-center p-1">
