@@ -20,6 +20,7 @@
     <a href="index.php?do=edit_intro">編輯自我介紹</a><br>
     <a href="index.php?do=edit_footer">編輯頁尾顏色</a><br>
     <a href="index.php?do=edit_footer_text">編輯頁尾文字</a><br>
+    <a href="index.php?do=edit_contact_text">編輯contact文字</a><br>
     <a href="index.php?do=contact">編輯contact</a><br>
     <a href="index.php?do=block">控制區塊顯示</a><br>
 </div>

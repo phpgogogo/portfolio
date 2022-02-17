@@ -1,5 +1,7 @@
 <!-- contact -->
 <?php
+$contact = $Contact_text->find(1);
+
 $rows=$Block->all();
 foreach($rows as $row){
     if($row["name"]=="contact" && $row["sh"]==1){
@@ -20,9 +22,9 @@ foreach($rows as $row){
                         </form>
                     </div>
                 <div class="col-md-6 col-12 pt-3" style="padding-left: 50px;">
-                    <p><i class="fas fa-phone"></i> Tel: 09xxxxxxxx</p>
-                    <p><i class="fas fa-envelope-open"></i> Email: aaa@aaa</p>
-                    <p><i class="fas fa-clock"></i> Time: 10:30~15:30</p>
+                    <p><i class="fas fa-phone"></i> Tel: <?=$contact["tel"];?></p>
+                    <p><i class="fas fa-envelope-open"></i> Email: <?=$contact["email"];?></p>
+                    <p><i class="fas fa-clock"></i> Time: <?=$contact["time"];?></p>
                 </div>
                 
             </div>

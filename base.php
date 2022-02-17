@@ -126,5 +126,6 @@ $Footer=new DB('footer');
 $Footer_text=new DB('footer_text');
 $Block=new DB("block");
 $Contact=new DB("contact");
+$Contact_text=new DB("contact_text");
 
 ?>
