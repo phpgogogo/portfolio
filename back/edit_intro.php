@@ -8,14 +8,14 @@
     <title>Document</title>
 </head>
 
-<body style="background:#eee;">
+<body>
     <?php
     $rows = $Intro->all();
     // dd($rows);
     foreach ($rows as $row) {
     }
     ?>
-    <div class="container" style="margin-top: 200px;">
+    <div class="container py-3" style="background: #eee;">
         <div class="row">
             <div class="col-md-6 col-12">
                 <h1>About me</h1>
@@ -39,80 +39,62 @@
                     <label>自我介紹:</label><br>
                     <textarea style="width:80%;" name="intro" id="intro" cols="30" rows="10"><?= $row["intro"]; ?></textarea>
                 </div>
-                <div class="mt-2">
-                    <button class="btn btn-success" type="button" onclick="edit()">修改intro</button>
-                    <a href="../index.php">
-                        <button class="btn btn-primary" type="button">回到前台</button>
-                    </a>
-                    <a href="./index.php"><button class="btn btn-info" type="button">回到後台</button></a>
+                <div class="mt-2" style="margin-left:140px;">
+                    <button class="btn btn-success" type="button" onclick="edit()">修改</button>
                 </div>
             </div>
 
             <div class="col-md-6 col-12">
-                <?php
-                $introimgs = $Introimg->all(["sh" => 1]);
-                foreach ($introimgs as $introimg) {
-                }
-                ?>
-                <img id="image" src="../img/<?= $introimg['img']; ?>" width="100%"><br>
-            </div>
-        </div>
-        <h1 class="text-center mt-3">新增自我介紹圖片</h1>
-        <div class="col-md-6 mx-auto mt-3">
-            <form action="../api/add_introimg.php" method="post" enctype="multipart/form-data">
-                <div class="text-center p-1">
-                    新增圖片:
-                    <input type="file" name="img">
+                <div class="mx-auto mt-3">
+                    <form action="../api/add_introimg.php" method="post" enctype="multipart/form-data">
+                        <div class="text-center p-1">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新增圖片:
+                            <input type="file" name="img">
+                        </div>
+                        <div class="text-center p-1">
+                            圖片名稱:
+                            <input type="text" name="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" value="送出">
+                        </div>
+                    </form>
                 </div>
-                <div class="text-center p-1">
-                    圖片名稱:
-                    <input type="text" name="name">
-                </div>
-                <div class="text-center">
-                    <input type="submit" value="送出">
-                </div>
-            </form>
-        </div>
-
-        <div>
-            <form action="../api/edit_intro_img.php" method="post">
-                <table class="mx-auto text-center w-100">
-                    <tr>
-                        <td class="p-3" width="30%">圖片縮圖</td>
-                        <td class="p-3" width="30%">圖片名稱</td>
-                        <td class="p-3">操作</td>
-                    </tr>
-                    <?php
-                        $imgs=$Introimg->all();
-                        foreach($imgs as $img){
-                            $checked=($img["sh"]==1)?"checked":"";
-                            ?>
+                <form action="../api/edit_intro_img.php" method="post">
+                    <table class="mx-auto text-center w-100">
+                        <tr>
+                            <td class="p-3" width="30%">圖片縮圖</td>
+                            <td class="p-3" width="30%">圖片名稱</td>
+                            <td class="p-3">操作</td>
+                        </tr>
+                        <?php
+                        $imgs = $Introimg->all();
+                        foreach ($imgs as $img) {
+                            $checked = ($img["sh"] == 1) ? "checked" : "";
+                        ?>
                             <tr>
                                 <td>
-                                    <img src="../img/<?=$img["img"];?>" style="width:100px;object-fit: cover;">
+                                    <img src="../img/<?= $img["img"]; ?>" style="width:100px;object-fit: cover;">
                                 </td>
                                 <td>
-                                    <input type="text" name="name[]" value="<?=$img["name"];?>">
+                                    <input type="text" name="name[]" value="<?= $img["name"]; ?>">
                                 </td>
                                 <td>
-                                    <input type="radio" name="sh" value="<?=$img["id"];?>" <?=$checked;?>>顯示<br>
-                                    <input type="checkbox" name="del[]" value="<?=$img["id"];?>">刪除
-                                    <input type="hidden" name="id[]" value="<?=$img['id'];?>">
+                                    <input type="radio" name="sh" value="<?= $img["id"]; ?>" <?= $checked; ?>>顯示<br>
+                                    <input type="checkbox" name="del[]" value="<?= $img["id"]; ?>">刪除
+                                    <input type="hidden" name="id[]" value="<?= $img['id']; ?>">
                                 </td>
                             </tr>
-                            <?php
+                        <?php
                         }
-                    ?>
-                </table>
-                <div class="mt-3 text-center">
-                    <input class="btn btn-success" type="submit" value="修改">
-                    <input class="btn btn-danger" type="reset" value="重置">
-                    <a href="../index.php">
-                        <button class="btn btn-primary" type="button">回到前台</button>
-                    </a>
-                    <a href="./index.php"><button class="btn btn-info" type="button">回到後台</button></a>
-                </div>
-            </form>
+                        ?>
+                    </table>
+                    <div class="mt-3 text-center">
+                        <input class="btn btn-success" type="submit" value="修改">
+                        <input class="btn btn-danger" type="reset" value="重置">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>

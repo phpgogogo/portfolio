@@ -1,4 +1,4 @@
-<h1 class="text-center">CONTACT</h1>
+<h3 class="text-center mb-4">留言資料</h3>
 
 <div>
     <table class="mx-auto text-center table table-hover">
@@ -24,14 +24,6 @@
             }
         ?>      
     </table>
-    <div class="text-center mt-3">
-            <a href="../index.php">
-                <button class="btn btn-info" type="button">回到前台</button>
-            </a>
-            <a href="index.php">
-                <button class="btn btn-primary" type="button">回到後台</button>
-            </a>
-        </div>
 </div>
 
 <script>

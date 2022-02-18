@@ -17,8 +17,8 @@
         // dd($rows);
 
     ?>
-    <div class="text-center mt-5">
-        <h1>新增作品集</h1>
+    <div class="text-center">
+        <!-- <h3>新增作品集</h3> -->
     </div>
 
 <div class="col-md-6 my-3 mx-auto">
@@ -49,7 +49,7 @@
 <form action="../api/edit_portfolio.php" method="post">
     <div class="col-md-10 mt-3 mx-auto">
         <div class="text-center py-2">
-            <h1>作品集清單</h1>
+            <!-- <h1>作品集清單</h1> -->
         </div>
         
         <div style="display:flex;" class="text-center">
@@ -95,10 +95,6 @@
         <div class="text-center mt-2">
                 <input class="btn btn-success" type="submit" value="確定修改">
                 <input class="btn btn-danger" type="reset" value="重置">
-                <a href="../index.php">
-                    <button class="btn btn-primary" type="button">回到前台</button>
-                </a>
-                <a href="./index.php"><button class="btn btn-info" type="button">回到後台</button></a>
         </div>
         
     

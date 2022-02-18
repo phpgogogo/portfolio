@@ -1,11 +1,11 @@
-<h1 class="text-center mt-3">編輯頁尾顏色</h1>
+<h3 class="text-center mt-3">編輯頁尾顏色</h3>
 
 <?php
     $rows=$Footer->all();
     // dd($rows);
     $now=$Footer->find(["sh"=>1]);
 ?>
-<div class="col-md-6 mx-auto mt-3">
+<div class="col-md-6 mx-auto py-3" style="background: #eee;">
     <form action="../api/edit_footer_color.php" method="post">
         <table class="table text-center">
             <tr>
@@ -33,8 +33,8 @@
 </div>
 
 
-<h1 class="text-center mt-3">新增頁尾顏色</h1>
-<div class="col-md-6 mx-auto mt-3">
+<h3 class="text-center mt-3">新增頁尾顏色</h3>
+<div class="col-md-6 mx-auto py-3" style="background: #eee;">
     <form action="../api/add_footer_color.php" method="post">
         <div class="text-center p-1">
             新增顏色名稱:
@@ -52,8 +52,8 @@
     </form>
 </div>
 
-<h1 class="text-center mt-3">刪除頁尾顏色</h1>
-<div class="col-md-6 mx-auto mt-3">
+<h3 class="text-center mt-3">刪除頁尾顏色</h3>
+<div class="col-md-6 mx-auto py-3" style="background: #eee;">
     <form action="../api/del_footer_color.php" method="post">
         <table class="table text-center">
             <tr>
@@ -79,14 +79,7 @@
 </div>
 
 
-<div class="text-center mt-5">
-    <a href="../index.php">
-        <button class="btn btn-info" type="button">回到前台</button>
-    </a>
-    <a href="index.php">
-        <button class="btn btn-primary" type="button">回到後台</button>
-    </a>
-</div>
+
 
 
 

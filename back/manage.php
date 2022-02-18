@@ -13,16 +13,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 <body>
-<h1 class="my-3">作品集管理後台</h1>
-<div class="">
-    <a href="../index.php">回到前台</a><br>
-    <a href="index.php?do=edit_portfolio">編輯作品集</a><br>
-    <a href="index.php?do=edit_intro">編輯自我介紹</a><br>
-    <a href="index.php?do=edit_footer">編輯頁尾顏色</a><br>
-    <a href="index.php?do=edit_footer_text">編輯頁尾文字</a><br>
-    <a href="index.php?do=edit_contact_text">編輯contact文字</a><br>
-    <a href="index.php?do=contact">編輯contact</a><br>
-    <a href="index.php?do=block">控制區塊顯示</a><br>
+
+<div class="mt-3">
+    <h1 class="text-center">MANAGE</h1>
 </div>
 
 

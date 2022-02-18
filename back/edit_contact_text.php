@@ -2,7 +2,7 @@
 <?php
 $contact = $Contact_text->find(1);
 ?>
-<div>
+<div class="py-3" style="background: #eee;">
     <form action="../api/edit_contact_text.php" method="post">
         <table class="mx-auto text-center">
             <tr>
@@ -27,12 +27,6 @@ $contact = $Contact_text->find(1);
         <div class="text-center mt-3">
             <input class="btn btn-success" type="submit" value="修改">
             <input class="btn btn-danger" type="reset" value="重置">
-            <a href="../index.php">
-                <button class="btn btn-info" type="button">回到前台</button>
-            </a>
-            <a href="index.php">
-                <button class="btn btn-primary" type="button">回到後台</button>
-            </a>
         </div>
     </form>
 </div>
