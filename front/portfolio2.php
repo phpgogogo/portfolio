@@ -13,7 +13,7 @@ foreach($abouts as $about){
         </li>
         <?php
             // $contents=$Portfolios->all(" group by `class`");
-            $contents=$Portfolios->q("SELECT DISTINCT `class` FROM `portfolios`");
+            $contents=$Portfolios->q("SELECT DISTINCT `class` FROM `portfolios` WHERE `sh`='1'");
             foreach($contents as $content){
                 ?>
                 <li class="nav-item" role="presentation">
