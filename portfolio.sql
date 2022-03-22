@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-02-17 08:27:46
--- 伺服器版本： 10.4.22-MariaDB
--- PHP 版本： 7.4.26
+-- 產生時間： 2022-03-22 19:02:36
+-- 伺服器版本： 10.4.21-MariaDB
+-- PHP 版本： 7.4.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -85,7 +85,7 @@ CREATE TABLE `contact_text` (
 --
 
 INSERT INTO `contact_text` (`id`, `tel`, `email`, `time`) VALUES
-(1, '09xxxxxxxx', 'aaaa@bbbb', '10:30~15:30');
+(1, '09xxxxxxxx', 'aaaa@bbbb', '10:30~16:30');
 
 -- --------------------------------------------------------
 
@@ -180,6 +180,7 @@ CREATE TABLE `portfolios` (
   `img` varchar(64) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `sh` int(1) UNSIGNED NOT NULL,
   `link` varchar(64) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `link2` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `title` varchar(64) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `class` varchar(64) COLLATE utf8mb4_unicode_520_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
@@ -188,12 +189,13 @@ CREATE TABLE `portfolios` (
 -- 傾印資料表的資料 `portfolios`
 --
 
-INSERT INTO `portfolios` (`id`, `img`, `sh`, `link`, `title`, `class`) VALUES
-(14, 'portfolio1.png', 1, 'http://220.128.133.15/s1100406/PHP/vote/index.php', 'Vote System', 'back'),
-(15, 'portfolio2.png', 1, 'http://220.128.133.15/s1100406/PHP/calendar/index.php', 'Calendar', 'back'),
-(16, 'portfolio3.png', 1, 'http://220.128.133.15/s1100406/HTML/bootstrap_form.html', 'Bootstrap Form', 'front'),
-(17, 'turtle.png', 1, 'ai.html', 'Illustrator', 'etc'),
-(18, 'banner.jpg', 1, 'ps.html', 'Photoshop', 'etc');
+INSERT INTO `portfolios` (`id`, `img`, `sh`, `link`, `link2`, `title`, `class`) VALUES
+(14, 'portfolio1.png', 1, 'http://220.128.133.15/s1100406/PHP/vote/index.php', 'https://github.com/phpgogogo/my_vote', 'Vote System', 'back'),
+(15, 'portfolio2.png', 1, 'http://220.128.133.15/s1100406/PHP/calendar/index.php', 'https://github.com/phpgogogo/calendar', 'Calendar', 'back'),
+(16, 'portfolio3.png', 1, 'http://220.128.133.15/s1100406/HTML/bootstrap_form.html', 'https://github.com/phpgogogo/bootstrap_form', 'Bootstrap Form', 'front'),
+(17, 'turtle.png', 1, 'ai.html', '', 'Illustrator', 'etc'),
+(18, 'banner.jpg', 1, 'ps.html', '', 'Photoshop', 'etc'),
+(20, 'api.png', 1, 'http://220.128.133.15/s1100406/HTML/myapi/index.html', 'https://github.com/phpgogogo/API_test', 'API', 'front');
 
 --
 -- 已傾印資料表的索引
@@ -297,7 +299,7 @@ ALTER TABLE `introimg`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `portfolios`
 --
 ALTER TABLE `portfolios`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

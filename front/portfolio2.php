@@ -42,8 +42,11 @@ foreach($abouts as $about){
                                 <img class="portfolio_img" src="img/<?=$row["img"];?>" alt="Card image" style="object-fit: cover;width:100%;height: 137px;padding-top: 9px;">
                             </div>
                             <div class="bbb" style="display: inline-block; position:absolute;left:0%; top:10px; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6));width: 100%;height: 93%;"></div>
-                            <div class="show_text" style="position:absolute; left:37.5%; top:70%; color:white; font-weight:bold ">
+                            <div class="show_text" style="position:absolute; left:20%; top:70%; color:white; font-weight:bold ">
                                 <a style="text-decoration: none; color: white;" href="<?=$row["link"];?>">show</a>
+                            </div>
+                            <div class="show_text" style="position:absolute; left:50%; top:70%; color:white; font-weight:bold ">
+                                <a style="text-decoration: none; color: white;" href="<?=$row["link2"];?>">Github</a>
                             </div>
                         </div>
                         <div class="card-body mt-5">
@@ -61,8 +64,11 @@ foreach($abouts as $about){
                                 <img class="portfolio_img" src="img/<?=$row["img"];?>" alt="Card image" style="object-fit: cover;width:100%;height: 137px;padding-top: 9px;">
                             </div>
                             <div class="bbb" style="display: inline-block; position:absolute;left:0%; top:10px; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6));width: 100%;height: 93%;"></div>
-                            <div class="show_text" style="position:absolute; left:37.5%; top:70%; color:white; font-weight:bold ">
+                            <div class="show_text" style="position:absolute; left:20%; top:70%; color:white; font-weight:bold ">
                                 <a style="text-decoration: none; color: white;" href="<?=$row["link"];?>">show</a>
+                            </div>
+                            <div class="show_text" style="position:absolute; left:50%; top:70%; color:white; font-weight:bold ">
+                                <a style="text-decoration: none; color: white;" href="<?=$row["link2"];?>">Github</a>
                             </div>
                         </div>
                         <div class="card-body mt-5">
@@ -81,8 +87,11 @@ foreach($abouts as $about){
                                 <img class="portfolio_img" src="img/<?=$row["img"];?>" alt="Card image" style="object-fit: cover;width:100%;height: 137px;padding-top: 9px;">
                             </div>
                             <div class="bbb" style="display: inline-block; position:absolute;left:0%; top:10px; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6));width: 100%;height: 93%;"></div>
-                            <div class="show_text" style="position:absolute; left:37.5%; top:70%; color:white; font-weight:bold ">
+                            <div class="show_text" style="position:absolute; left:20%; top:70%; color:white; font-weight:bold ">
                                 <a style="text-decoration: none; color: white;" href="<?=$row["link"];?>">show</a>
+                            </div>
+                            <div class="show_text" style="position:absolute; left:50%; top:70%; color:white; font-weight:bold ">
+                                <a style="text-decoration: none; color: white;" href="<?=$row["link2"];?>">Github</a>
                             </div>
                         </div>
                         <div class="card-body mt-5">
@@ -102,8 +111,11 @@ foreach($abouts as $about){
                                 <img class="portfolio_img" src="img/<?=$row["img"];?>" alt="Card image" style="object-fit: cover;width:100%;height: 137px;padding-top: 9px;">
                             </div>
                             <div class="bbb" style="display: inline-block; position:absolute;left:0%; top:10px; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6));width: 100%;height: 93%;"></div>
-                            <div class="show_text" style="position:absolute; left:37.5%; top:70%; color:white; font-weight:bold ">
+                            <div class="show_text" style="position:absolute; left:20%; top:70%; color:white; font-weight:bold ">
                                 <a style="text-decoration: none; color: white;" href="<?=$row["link"];?>">show</a>
+                            </div>
+                            <div class="show_text" style="position:absolute; left:50%; top:70%; color:white; font-weight:bold ">
+                                <a style="text-decoration: none; color: white;" href="<?=$row["link2"];?>">Github</a>
                             </div>
                         </div>
                         <div class="card-body mt-5">
@@ -121,8 +133,11 @@ foreach($abouts as $about){
                                 <img class="portfolio_img" src="img/<?=$row["img"];?>" alt="Card image" style="object-fit: cover;width:100%;height: 137px;padding-top: 9px;">
                             </div>
                             <div class="bbb" style="display: inline-block; position:absolute;left:0%; top:10px; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6));width: 100%;height: 93%;"></div>
-                            <div class="show_text" style="position:absolute; left:37.5%; top:70%; color:white; font-weight:bold ">
+                            <div class="show_text" style="position:absolute; left:20%; top:70%; color:white; font-weight:bold ">
                                 <a style="text-decoration: none; color: white;" href="<?=$row["link"];?>">show</a>
+                            </div>
+                            <div class="show_text" style="position:absolute; left:50%; top:70%; color:white; font-weight:bold ">
+                                <a style="text-decoration: none; color: white;" href="<?=$row["link2"];?>">Github</a>
                             </div>
                         </div>
                         <div class="card-body mt-5">
